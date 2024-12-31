@@ -10,7 +10,7 @@ const photos = [
     date: "",
   },
   {
-    url: "src/Images/2.jpg",
+    url: "src/Images/5.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
@@ -25,7 +25,7 @@ const photos = [
     date: "",
   },
   {
-    url: "src/Images/5.jpg",
+    url: "src/Images/2.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },

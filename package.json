@@ -5,10 +5,11 @@
   "homepage": "https://beratarpa.com",
   "type": "module",
   "scripts": {
-    "start":"vite start",
+    "start": "vite start",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "dev": "vite dev"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
