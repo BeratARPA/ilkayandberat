@@ -5,32 +5,32 @@ import { Section } from "../ui/Section";
 
 const photos = [
   {
-    url: "src/Images/1.jpg",
+    url: "./src/Images/1.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
   {
-    url: "src/Images/5.jpg",
+    url: "./src/Images/5.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
   {
-    url: "src/Images/3.jpg",
+    url: "./src/Images/3.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
   {
-    url: "src/Images/4.jpg",
+    url: "./src/Images/4.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
   {
-    url: "src/Images/2.jpg",
+    url: "./src/Images/2.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
   {
-    url: "src/Images/6.jpg",
+    url: "./src/Images/6.jpg",
     caption: "Seni Seviyorum 🤍",
     date: "",
   },
