@@ -1,22 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
+function openModal(img) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
-    const closeBtn = document.querySelector('.modal .close');
+    
+    modalImg.src = img.src;
+    modal.classList.add('show');
+    
+    // Scroll'u devre dışı bırak
+    document.body.style.overflow = 'hidden';
+}
 
-    if (modal && modalImg && closeBtn) {
-        window.openModal = function(img) {
-            modal.style.display = 'block';
-            modalImg.src = img.src;
-        }
+// Modal'ı kapatma fonksiyonu
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('show');
+    
+    // Scroll'u tekrar aktif et
+    document.body.style.overflow = 'auto';
+}
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+// Modal dışına tıklandığında kapatma
+document.getElementById('imageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
 
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
+// Close butonuna tıklandığında kapatma
+document.querySelector('.close').addEventListener('click', closeModal);
+
+// ESC tuşu ile kapatma
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
     }
 });

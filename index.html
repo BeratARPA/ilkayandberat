@@ -2,11 +2,21 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>İlkay & Berat - 2025</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
+    <div class="music-control">
+        <button id="musicToggle" class="music-button">
+            <span class="music-icon">🔊</span>
+        </button>
+    </div>
+
+    <div id="youtubePlayer" style="display: none;"></div>
+
     <div class="heart-container">
         <button id="heartBtn" class="heart">❤️</button>
     </div>
@@ -44,7 +54,7 @@
     </section>
 
     <section class="memories">
-        <h2>✨ Unutulmaz Anılarımız ✨</h2>
+        <h2 id="specialTitle">✨ Unutulmaz Anılarımız ✨</h2>
         <div class="gallery">
             <img src="images/1.jpg" alt="Anı 1" onclick="openModal(this)">
             <img src="images/5.jpg" alt="Anı 2" onclick="openModal(this)">
@@ -69,7 +79,7 @@
     </div>
 
     <footer>
-        <p>❤️ İlkay & Berat - 2025 ❤️</p>
+        <p><span class="footer-names">❤️ İlkay & Berat - 2025 ❤️</span></p>
     </footer>
 
     <script src="js/popup.js"></script>
@@ -77,6 +87,13 @@
     <script src="js/heart.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/love-button.js"></script>
+    <script src="js/gifts.js"></script>
+    <script src="js/special-modal.js"></script>
+    <script src="js/kiss-effect.js"></script>
+    <script src="js/countdown-explosion.js"></script>
+    <script src="js/physics-text.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             new Snow();
@@ -90,5 +107,12 @@
             }
         });
     </script>
+
+    <div id="specialModal" class="special-modal">
+        <div class="special-modal-content">
+            <button class="close-special">&times;</button>
+            <img id="specialImage" src="images/7.jpg" alt="Özel Anı">
+        </div>
+    </div>
 </body>
 </html>
