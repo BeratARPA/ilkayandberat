@@ -1,0 +1,14 @@
+@import 'css/base.css';
+@import 'css/countdown.css';
+@import 'css/gallery.css';
+@import 'css/message.css';
+@import 'css/controls.css';
+
+/* Snow effect */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}

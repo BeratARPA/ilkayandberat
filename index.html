@@ -1,14 +1,104 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/Images/4.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&#x1F90D; İlkay & Berat &#x1F90D;</title>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlkay & Berat - 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-control">
+        <button id="musicToggle">🎵</button>
+        <span id="musicStatus">Durdur</span>
+    </div>
+
+    <div class="heart-container">
+        <button id="heartBtn" class="heart">❤️</button>
+    </div>
+
+    <header>
+        <h1>İlkay & Berat</h1>
+        <p class="subtitle">⭐ Mutlu Yıllar 2025 ⭐</p>
+    </header>
+
+    <div class="countdown">
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>SAAT</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>DAKİKA</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>SANİYE</p>
+        </div>
+    </div>
+
+    <section class="message-card">
+        <h2>Bizim Hikayemiz</h2>
+        <div class="message-content">
+            <p>Sevgili İlkay,</p>
+            <p>Her yeni yıl, seninle paylaştığımız anılarla daha da güzelleşiyor. Gülüşün, hayatıma kattığın renk ve mutluluk için sonsuz teşekkür ederim.</p>
+            <p><em>Seninle geçen her an, hayatımın en değerli hazinesi...</em></p>
+            <p>2025'e girerken, seninle paylaşacağımız daha nice mutlu yıllar için sabırsızlanıyorum. Aşkımız her geçen gün daha da güçleniyor.</p>
+            <p class="signature">- Berat</p>
+            <button class="love-button">❤️ Seni Seviyorum</button>
+        </div>
+    </section>
+
+    <section class="memories">
+        <h2>✨ Unutulmaz Anılarımız ✨</h2>
+        <div class="gallery">
+            <img src="images/photo1.jpg" alt="Anı 1" onclick="openModal(this)">
+            <img src="images/photo2.jpg" alt="Anı 2" onclick="openModal(this)">
+            <img src="images/photo3.jpg" alt="Anı 3" onclick="openModal(this)">
+            <img src="images/photo4.jpg" alt="Anı 4" onclick="openModal(this)">
+            <img src="images/photo5.jpg" alt="Anı 5" onclick="openModal(this)">
+            <img src="images/photo6.jpg" alt="Anı 6" onclick="openModal(this)">
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Modal Image">
+    </div>
+
+    <button id="messageToggle" class="message-trigger">💌</button>
     
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
-  </body>
+    <div class="fixed-message">
+        <p>Sevgili İlkay,</p>
+        <p>Her anımızı değerli kılan varlığın için teşekkür ederim. 2025'e girerken seninle olmak en büyük mutluluğum.</p>
+        <p class="signature">- Berat</p>
+    </div>
+
+    <footer>
+        <p>❤️ İlkay & Berat - 2025 ❤️</p>
+    </footer>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/popup.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/heart.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Snow();
+            
+            // Initialize message popup
+            const messageToggle = document.getElementById('messageToggle');
+            const fixedMessage = document.querySelector('.fixed-message');
+            
+            if (messageToggle && fixedMessage) {
+                new Popup(messageToggle, fixedMessage, 'right-bottom');
+            }
+        });
+    </script>
+</body>
 </html>
